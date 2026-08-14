@@ -1,0 +1,20 @@
+{
+  "name": "@mochi-pay/game-core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:missions": "vitest run --config vitest.challenge.config.ts --mode demo",
+    "test:mission:1": "vitest run --config vitest.challenge.config.ts -t \"미션 1\"",
+    "test:mission:2": "vitest run --config vitest.challenge.config.ts -t \"미션 2\"",
+    "test:mission:3": "vitest run --config vitest.challenge.config.ts -t \"미션 3\"",
+    "test:mission:4": "vitest run --config vitest.challenge.config.ts -t \"미션 4\""
+  },
+  "devDependencies": {
+    "vitest": "^3.2.4"
+  }
+}
