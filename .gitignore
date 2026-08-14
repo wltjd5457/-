@@ -1,0 +1,27 @@
+node_modules/
+dist/
+coverage/
+
+# Tool caches and generated metadata
+.vite/
+*.tsbuildinfo
+
+# Local configuration
+.env
+.env.*
+!.env.example
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

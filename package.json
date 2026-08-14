@@ -1,0 +1,27 @@
+{
+  "name": "mochi-pay-guardians",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently --kill-others --names API,WEB --prefix-colors magenta,cyan \"npm run dev --workspace @mochi-pay/api\" \"npm run dev --workspace @mochi-pay/web\"",
+    "build": "npm run build --workspace @mochi-pay/game-core && npm run build --workspace @mochi-pay/api && npm run build --workspace @mochi-pay/web",
+    "test": "npm run test --workspace @mochi-pay/game-core && npm run test --workspace @mochi-pay/api",
+    "test:missions": "npm run test:missions --workspace @mochi-pay/game-core",
+    "test:mission:1": "npm run test:mission:1 --workspace @mochi-pay/game-core",
+    "test:mission:2": "npm run test:mission:2 --workspace @mochi-pay/game-core",
+    "test:mission:3": "npm run test:mission:3 --workspace @mochi-pay/game-core",
+    "test:mission:4": "npm run test:mission:4 --workspace @mochi-pay/game-core",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
